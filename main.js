@@ -66,7 +66,7 @@ async function position() {
 }
 
 position()
-// function pour recuper la temperature
+// function pour recuper la temperatur
 async function temps(statut) {
   const link=`http://api.openweathermap.org/data/2.5/weather?units=metric&q=${statut},&appid=cf7cda910d55224514128a8a6d7c5827`
   const weather=await fetch(`${link}`).then(res=>res.json())
