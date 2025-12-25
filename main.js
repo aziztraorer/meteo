@@ -69,8 +69,8 @@ position()
 // function pour recuper la temperatur
 async function temps(statut) {
   const link=`http://api.openweathermap.org/data/2.5/weather?units=metric&q=${statut},&appid=cf7cda910d55224514128a8a6d7c5827`
-  const weather=await fetch(`${link}`).then(res=>res.json())
-  let degs=weather.main.temp_max
+  const weather=await fetch(`${link}`).then(res=>res.json());
+  let degs=weather.main.temp_max;
   temperature.textContent=`${degs.toFixed()} °C`;
   
 }
